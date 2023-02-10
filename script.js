@@ -1,24 +1,24 @@
-const animalCrossing = document.getElementById("animal-crossing");
-const modal = document.getElementById("modal");
-const close = document.querySelector(".close");
-const modalImg = document.getElementById("modal-img");
-const modalTitle = document.getElementById("modal-title");
+// const animalCrossing = document.getElementById("animal-crossing");
+// const modal = document.getElementById("modal");
+// const close = document.querySelector(".close");
+// const modalImg = document.getElementById("modal-img");
+// const modalTitle = document.getElementById("modal-title");
 
-animalCrossing.addEventListener("click", function() {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  modalTitle.innerHTML = this.nextElementSibling.innerHTML;
-});
+// animalCrossing.addEventListener("click", function() {
+//   modal.style.display = "block";
+//   modalImg.src = this.src;
+//   modalTitle.innerHTML = this.nextElementSibling.innerHTML;
+// });
 
-close.addEventListener("click", function() {
-  modal.style.display = "none";
-});
+// close.addEventListener("click", function() {
+//   modal.style.display = "none";
+// });
 
-window.addEventListener("click", function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-});
+// window.addEventListener("click", function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// });
 
 
 

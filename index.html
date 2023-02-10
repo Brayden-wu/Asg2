@@ -50,6 +50,18 @@
         </div>
     </div>
 
+
+    
+    <script>
+        document.getElementById("loginbutton").addEventListener("click",function(){
+            document.querySelector(".loginpopup").style.display = "flex";
+        })
+
+        document.querySelector(".closepopup").addEventListener("click",function(){
+            document.querySelector(".loginpopup").style.display = "none";
+        })
+    </script>
+
     <div class="first-section">
         <h1>Welcome to BooksConnect</h1>
     </div>
