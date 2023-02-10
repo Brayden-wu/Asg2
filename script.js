@@ -22,6 +22,7 @@ window.addEventListener("click", function(event) {
 
 
 
+
 // RIDZAL BELOW
 
 const hamburger = document.querySelector(".hamburger");
