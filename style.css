@@ -110,3 +110,222 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+
+/* RIDZAL BELOW */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background-color: rgb(198, 198, 198);
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  font-family: Lato, sans-serif;
+}
+
+.navbar{
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  /* flex-shrink: 0; */
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-logo{
+  display: flex;
+  size: fixed;
+  /* justify-content: center;
+  align-items: center; */
+  max-width: 75px;
+  max-height: 75px;
+  /* flex-shrink: 0; */
+}
+
+.nav-link{
+  transition: 0.7sec ease;
+}
+
+.nav-link:hover{
+  color: white;
+}
+
+.hamburger{
+  display:none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+@media(max-width:768px){
+  .hamburger{
+      display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+      opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+      transform:translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+      transform:translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu{
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: rgb(198, 198, 198);
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+  }
+
+  .nav-option{
+      margin: 16px 0;
+  }
+
+  .nav-menu.active{
+      left: 0;
+  }
+}
+
+/* video background */
+#background-video {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* page content */
+.video-section h1, h2 {
+  color: rgb(236, 236, 0);
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-section{
+ position: relative; 
+}
+
+.text-overlay{
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.first-section h1{
+  color: black;
+  text-align: center;
+  /* top: 50%; */
+  font-family: Lato, sans-serif;
+  font-size: 5vw;
+  font-weight: normal;
+}
+
+.first-section{
+  display: block;
+  text-align: center;
+  line-height: 100px;
+  position: relative;
+}
+
+.loginpopup{
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: none;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+}
+
+.loginpopupcontent{
+  /* height: 250px;
+  width: 500px; */
+  height: 20vw;
+  width: 45vw;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 2;
+  position: relative;
+}
+
+.closepopup{
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  max-width: 2vw;
+  max-height: 2vw;
+}
+
+.loginpopup input{
+  text-align: center;
+  margin-top: 3vw;
+  margin-left: 10vw;
+  /* margin: 5px; */
+  display: block;
+  width: 50%;
+  padding: 8px;
+  border: 1px solid grey;
+}
+
+.loginpopup a{
+  text-align: center;
+  margin-top: 4vw;
+  margin-left: 10vw;
+  /* margin: 5px; */
+  display: block;
+  width: 50%;
+  padding: 8px;
+  background-color: lightblue;
+  border-radius: 5px;
+  transition: all .2s ease-in;
+}
+
+.loginpopup a:hover{
+  background-color: rgb(128, 201, 225);
+}

@@ -1,42 +1,46 @@
-function showBookDetails(title, imageUrl, price) {
-  const bookDetails = `
-  <div class="book-details">
-      <img src="${imageUrl}" alt="${title}" width="200px" height="200px">
-      <h4>${title}</h4>
-      <p1>Price: $${price}</p1>
-      <button id="add-to-cart-button">Add to Cart</button>
-  </div>
-  `;
+const animalCrossing = document.getElementById("animal-crossing");
+const modal = document.getElementById("modal");
+const close = document.querySelector(".close");
+const modalImg = document.getElementById("modal-img");
+const modalTitle = document.getElementById("modal-title");
 
-  const overlay = document.createElement("div");
-  overlay.innerHTML = bookDetails;
-  overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
-  overlay.style.position = "fixed";
-  overlay.style.top = "0";
-  overlay.style.bottom = "0";
-  overlay.style.left = "0";
-  overlay.style.right = "0";
-  overlay.style.display = "flex";
-  overlay.style.alignItems = "center";
-  overlay.style.justifyContent = "center";
-  document.body.appendChild(overlay);
+animalCrossing.addEventListener("click", function() {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  modalTitle.innerHTML = this.nextElementSibling.innerHTML;
+});
 
-  overlay.addEventListener("click", function(event) {
-      if (event.target.id === "add-to-cart-button") {
-          addToCart(title, price);
-      } else {
-          document.body.removeChild(overlay);
-      }
-  });
-}
+close.addEventListener("click", function() {
+  modal.style.display = "none";
+});
 
-const books = document.getElementsByClassName("col-4");
-for (const book of books) {
-  const img = book.getElementsByTagName("img")[0];
-  const title = book.getElementsByTagName("h4")[0].innerHTML;
-  const price = book.getElementsByTagName("p1")[0].innerHTML.split(" ")[1];
-  img.addEventListener("click", function() {
-      showBookDetails(title, img.src, price);
-  });
-}
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
 
+
+
+// RIDZAL BELOW
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click",() => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n =>n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}))
+
+document.getElementById("loginbutton").addEventListener("click",function(){
+    document.querySelector(".loginpopup").style.display = "flex";
+})
+
+document.querySelector(".closepopup").addEventListener("click",function(){
+    document.querySelector(".loginpopup").style.display = "none";
+})
