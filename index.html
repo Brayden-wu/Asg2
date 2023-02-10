@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,100&family=Merriweather:wght@900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js" integrity="sha512-fTTVSuY9tLP+l/6c6vWz7uAQqd1rq3Q/GyKBN2jOZvJSLC5RjggSdboIFL1ox09/Ezx/AKwcv/xnDeYN9+iDDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <header>
@@ -64,7 +65,19 @@
 
     <div class="first-section">
         <h1>Welcome to BooksConnect</h1>
-    </div>
+            <div id="icon-container" class="icon-container"></div>
+
+                <script>
+                var animation = bodymovin.loadAnimation({
+                // animationData: { /* ... */ },
+                container: document.getElementById('icon-container'),
+                path: '26918-book-page-turn-story-telling.json',
+                renderer: 'svg',
+                loop: true,
+                autoplay: true
+                });
+                </script>
+        </div>
 
     <div class="video-section">
             <!-- below is for video -->

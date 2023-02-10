@@ -407,3 +407,18 @@ a{
   justify-content: center;
   /* height: calc(100vh - 50px); */
 }
+
+/* #icon-container{
+  width: 100px;
+  justify-content: center;
+  display: flex;
+} */
+
+.icon-container{
+  display: flex;
+  /* width: 20vw; */
+  height: 10vw;
+  margin: 0 auto;
+  width: 50%;
+ 
+ }
