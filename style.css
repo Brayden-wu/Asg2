@@ -31,7 +31,13 @@
 }
 
 .col-4:hover{
+  transition: 0.3s;
   transform: translateY(-10px);
+  /* -webkit-transition: padding 2s; */
+}
+
+.col-4:not(:hover){
+  transition: 0.3s;
 }
 
 .col-4 h4{
@@ -328,4 +334,16 @@ a{
 
 .loginpopup a:hover{
   background-color: rgb(128, 201, 225);
+}
+
+.third-section{
+  display: flex;
+  /* margin-left: 24vw;
+  margin-top: 5vw; */
+  justify-content: center;
+}
+
+.third-section .col-4{
+  background-color: #000000;
+  /* width: 24vw; */
 }
