@@ -344,6 +344,9 @@ a{
 }
 
 .third-section .col-4{
-  background-color: #000000;
+  /* background-color: #000000; */
   /* width: 24vw; */
+  margin-right: 25px;
+  margin-top: 25px;
+  justify-content: center;
 }
